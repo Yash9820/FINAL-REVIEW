@@ -1,6 +1,6 @@
 from flask import Flask, render_template,request,flash,session,url_for,redirect,session,jsonify,g,send_file,send_from_directory
 from flask_sqlalchemy import SQLAlchemy
-from forms import RegistrationForm,LoginForm,TeacherRegistrationForm,EditProfileForm,EditTeacherProfile,RequestResetForm, ResetPasswordForm,ChangePasswordForm,StudentRegistrationForm,AdminTeacherRegistrationForm,*
+from forms import RegistrationForm,LoginForm,TeacherRegistrationForm,EditProfileForm,EditTeacherProfile,RequestResetForm, ResetPasswordForm,ChangePasswordForm,StudentRegistrationForm,AdminTeacherRegistrationForm
 from flask_mail import Mail,Message
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
