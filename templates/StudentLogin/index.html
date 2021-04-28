@@ -1,0 +1,39 @@
+<head>
+        <title>Student Home-Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" />
+    </head>
+{% extends "StudentLogin/layout1.html" %}
+{% block body %}
+<style>
+
+</style>
+    <div class="main_content">
+        <div class="header">Welcome!! {{ email }}</div>  
+        <div class="info">
+		{% include "message.html" %}
+		  <br>
+		  <div class="container">
+		  <h2 align="center"> Notice Board </h2>
+		  {% for data in showannounce %}
+		  {% if session.semester==data.sem %}
+
+		  <div>
+          <img src="{{ url_for('static', filename='bulletin.png')}}" ALIGN="left" alt="Avatar" style="width:100px;border-radius: 50%;">
+            <BR CLEAR="right" />
+			<h3>{{ data.name }} From {{ data.pdpart }}</h3>
+		<h4 style="padding-left:5em" >{{ data.atitle }}</h4>
+		<h4 style="padding-left:5.5em" >{{ data.adescription }}</h4>
+		<h4 style="padding-left:5.5em" >{{ data.adate }}	</h4>
+			<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+			</div>
+			{% endif %}
+			{% endfor %}
+          </div>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>	
+{% endblock %}
