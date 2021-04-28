@@ -1403,8 +1403,8 @@ def addnewprofessor():
 	return redirect(url_for('adminlogin'))
 
 application.secret_key="12345678"
-application.run(debug=True)
 
 if __name__ == '__main__':
-    application.run(debug=True)
+	application.debug = True
+	application.run()
 
