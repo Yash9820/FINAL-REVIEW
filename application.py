@@ -36,7 +36,7 @@ application.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 mysql = MySQL(application) 
 db = SQLAlchemy(application)
 bcrypt=Bcrypt(application)
-login_manager=LoginManager(application)
+
 
 class Register(db.Model):
 	name = db.Column(db.String(80),	unique=False,	nullable=False)
